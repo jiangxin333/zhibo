@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>舞邦KOLO</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/base.css?v=1.0" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/gift.css" rel="stylesheet">
+  <script src="https://hm.baidu.com/hm.js?1e5447384b2442d7ed8fc141c95b5b43"></script><script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.cookie.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/common.js"></script>
+  <!-- <script src="http://demo.app.cditv.cn/statics/kdyzb/js/config.js"></script> -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/html5.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="page-w1320">
+  <div style="height: 30px;width: 100%;line-height: 30px;"></div>
+    <marquee direction="left" scrolldelay="100" style="position: absolute;z-index:9999;top:0;left:0;height:30px;line-height:30px;" id="notices">网站正在建设中</marquee>
+  
+
+  <div class="site-header" style="position: relative;">
+    <div class="filterbg"></div>
+
+    <!-- 导航 -->
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container-fluid">
+        <a class="left logo" style="clear: both;" href="index.html"><img src="img/LOGO.png"></a>
+        <div class="container header-area">
+          <div class="site-menu left row">
+            <ul class="nav left">
+              <li>
+                <a href="index.html" key="index">首页</a>
+              </li>
+                                          <li>
+                <a href="zhubo.html" key="playCenter" class="active">直播</a>
+              </li>
+                            <li>
+                <a href="company_info.html" key="playCenter">公司介绍</a>
+              </li>
+                  <li>
+                <a href="new_file.html" key="playCenter">内容自审制度</a>
+              </li>
+                                        </ul>
+            <!-- <div class="input search-input left">
+              <input type="text" class="form-control left" placeholder="输入房间号...">
+              <span class="left searchIcon"></span>
+            </div> -->
+            <ul class="login-area right beforelogin">
+              <li>
+                <a href="#2" class="btn btn-red btn-small loginLink">登录</a>
+              </li>
+              <li>
+                <a href="#2" class="btn btn-white btn-small registLink">注册</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 登录 -->
+    <div class="login-action alertarea">
+      <div class="i-tabs i-login-tabs" data-slide="click">
+        <span class="i-tabs-left"></span>
+        <span class="i-tabs-right"></span>
+        <div class="i-tabs-nav">
+          <ul>
+            <li class="i-tabs-item i-tabs-active" data-property="login">登录</li>
+            <li class="i-tabs-item" data-property="register">注册</li>
+          </ul>
+        </div>
+        <div class="i-tabs-container left">
+          <div class="i-tabs-content" data-property="login" style="display: block;">
+            <div class="col-md-7">
+              <form>
+                <div class="form-group">
+                  <h4>账号登录</h4>
+                </div>
+                <div class="form-group">
+                  <input type="text" required="" class="form-control" id="userName" placeholder="账号">
+                </div>
+                <div class="form-group">
+                  <input type="password" required="" class="form-control" id="userPwd" placeholder="密码">
+                </div>
+                <button type="button" id="btn-login" class="btn btn-red btn-long">登录</button>
+                <a href="#" style="color:#010101;font-size:12px;margin-left: 20px;" class="forgotPassword">找回密码</a>
+              </form>
+            </div>
+          </div>
+          <div class="i-tabs-content" data-property="register" style="display: none;">
+            <div class="col-md-7">
+              <form>
+                <div class="form-group">
+                  <h4>账号注册</h4>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="regName" required="" placeholder="请输入您的账号">
+                  <label class="tip"></label>
+                </div>
+                <div class="form-group">
+                  <input type="password" minlength="6" maxlength="15" class="form-control" id="regPwd" required="" placeholder="请输入您的密码">
+                </div>
+                <div class="form-group">
+                  <input type="password" minlength="6" maxlength="15" class="form-control" equalto="#regPwd" id="confirmPwd" required="" placeholder="请确认您的密码">
+                </div>
+                <div class="form-group">
+                  <input class="form-control " type="mobile" id="confirmPhone" required="" placeholder="请确认您的手机号，每个号码最多可用五次">
+                </div>
+                <div class="form-group">
+                  <input class="form-control left " style="display:inline-block;width:120px" id="confirmCode" placeholder="请确认验证码">
+                  <!--<button class="btn btn-red disabled btn-middle right" disabled="disabled" id="sendCode" style="white-space:nowrap;width:auto;padding:0 10px;display: inline-block;margin-right:5px;">发送验证</button>-->
+                  <input class="btn btn-red disabled btn-middle right" type="button" disabled="disabled" id="sendCode" style="white-space:nowrap;width:auto;padding:0 10px;display: inline-block;margin-right:5px;" value="发送验证">
+                </div>
+                <div class="form-group">
+                  <button type="button" id="btn-reg" class="btn btn-red btn-long">同意并注册</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-4 right mtop-27">
+          <form>
+            <div class="form-group">
+              <h4>第三方账号登录</h4>
+            </div>
+            <div class="form-group">
+              <span id="qqLoginBtn"><a href="#3" onclick="return window.open(&#39;https://graph.qq.com/oauth2.0/authorize?client_id=101355797&amp;response_type=token&amp;scope=all&amp;redirect_uri=http%3A%2F%2Fqzonestyle.gtimg.cn%2Fqzone%2Fopenapi%2Fredirect-1.0.1.html&#39;, &#39;oauth2Login_10144&#39; ,&#39;height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes&#39;);"><img src="{}{}statics/kdyzb/images/Connect_logo_3.png" alt="QQ登录" border="0"></a></span>
+              <span id="wxlogin"><i></i><a href="http://www.wenzib.com/wxlogin.html" target="_blank">微信登录</a></span>
+              <span id="wxloginBtn"><a style="color:#010101" href="../../../wxlogin.html">微信登录</a></span>
+            </div>
+            <div class="form-group" style="padding-top:8px">
+              <span class="tip">登录前请仔细阅读《<a href="http://www.wenzib.com/html/base.html?cate=Company&amp;type=protocol" target="_blank">用户服务协议</a>》</span>
+            </div>
+          </form>
+        </div> -->
+      </div>
+    </div>
+
+    <script>
+      jQuery(function($) {
+
+        changeTabs();
+
+        // 搜索start
+        function searchRoom(uid) {
+          var anchorUrl = publicConfig.ApiUrl + "U002/a011.php"; //根据房间号查询主播信息
+          var anchorData = {
+            userNO: uid
+          };
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+              if (res.success) {
+                var room = res.data.chatroomId;
+                location.href = "../../../html/room.html?roomId=" + uid;
+
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+            }
+          };
+          _ajax(anchorUrl, anchorData, response);
+        }
+        $(".search-input>input").on("keypress", function(event) {
+          if (event.keyCode == 13) {
+            $(".searchIcon").trigger("click");
+          }
+        });
+        $(".searchIcon").on("click", function() {
+          var roomNO = $(".search-input>input").val();
+          if (roomNO) {
+            searchRoom(roomNO);
+          } else {
+            alert("您还没有输入房间号！");
+          }
+        });
+        // 搜索end
+
+
+        function queryArray(arr, item) {
+          return arr[item].substring(arr[item].indexOf("=") + 1);
+        }
+
+        var input = document.createElement('input');
+        if ("placeholder" in input) {
+
+        } else {
+          $("input[type='text'],input[type='mobile']").each(function() {
+            if ($(this).attr("placeholder") != "undefined") {
+              $(this).val($(this).attr("placeholder"));
+              var tip = $(this).attr("placeholder");
+              $(this).focus(function() {
+                $(this).val("");
+              });
+              $(this).blur(function() {
+                if ($(this).val() == "") {
+                  $(this).val(tip);
+                }
+              });
+            }
+          });
+          $("input[type='password']").each(function() {
+
+            var tip = $(this).attr("placeholder");
+            $(this).closest("div").append("<label class='replaceWZ'>" + tip + "</label>");
+            $(this).focus(function() {
+              $(this).closest("div").find("label.replaceWZ").remove();
+            });
+            $(this).blur(function() {
+              if ($(this).val() == "") {
+                $(this).closest("div").append("<label class='replaceWZ'>" + tip + "</label>");
+              }
+            });
+          });
+          $("label.replaceWZ").on('click', function() {
+            $(this).closest("div").find("input").focus();
+            $(this).remove();
+          });
+        }
+
+        $(".btn").on("mouseover", function() {
+          $(this).addClass("btn-hover");
+        }).on("mouseout", function() {
+          $(this).removeClass("btn-hover");
+        });
+        $("form input").on("blur", function() {
+          $(this).valid();
+        });
+
+        var userObj = "";
+        if (localStorage.getItem('uInfo')) {
+          userObj = JSON.parse(localStorage.getItem('uInfo'));
+        }
+
+
+        // 登录注册弹框
+        $("a.loginLink").on("click", function() {
+          customPlugins.alertTip(".login-action", 450, 530, true);
+          $(".i-tabs-item[data-property='login']").addClass("i-tabs-active").siblings().removeClass("i-tabs-active");
+          $(".i-tabs-content[data-property='login']").show().siblings().hide();
+        });
+        $("a.registLink").on("click", function() {
+          customPlugins.alertTip(".login-action", 450, 530, true);
+          $(".i-tabs-item[data-property='register']").addClass("i-tabs-active").siblings().removeClass("i-tabs-active");
+          $(".i-tabs-content[data-property='register']").show().siblings().hide();
+        });
+
+        if ($.cookie("onlineToken") && userObj) {
+
+        } else {
+          //游戏房间需登录
+          if (location.href.indexOf("play.html?room") >= 0) {
+
+            $("a.loginLink").trigger("click");
+
+            $("div#flashContent").css("position", "relative").html("");
+            $("div.video-area").html('<span class="btn-play btn-middle" style="padding:0 5px;font-size:14px;width:140px;text-align:center;cursor:default;color:#ffffff;display:block">精彩游戏在等您，赶紧<a  href="#2" class="showLogin">登录</a>吧！</span>');
+            $("a.showLogin").on("click", function() {
+              $("a.loginLink").trigger("click");
+            });
+
+          }
+
+        }
+        //发送验证码
+        $("#sendCode").on("click", function() {
+          $(this).addClass("disabled").attr("disabled", "disabled");
+          $("#confirmPhone").attr("readonly", true);
+          $(this).val("发送中...");
+          var $this = $(this);
+          var codeUrl = publicConfig.ApiUrl + "U002/a001.php";
+          var codeData = {
+            mobile: $("#confirmPhone").val()
+          };
+          leftSeconds(60);
+          //                  return false;
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+
+              if (res.success) {
+
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+            }
+          };
+          // _ajax(codeUrl, codeData, response);
+        });
+
+        //检测用户名是否重复
+        $("#regName").on("blur", function() {
+          var $this = $(this);
+
+          if (isChinese("#regName")) {
+            $(this).focus();
+            $this.next("label").html("请不要输入汉字！");
+
+            return false;
+          }
+          if ($this.valid()) {
+            $this.parent().find("label.tip").html("");
+          }
+
+          var codeUrl = publicConfig.ApiUrl + "U002/a002.php";
+          var codeData = {
+            username: $(this).val()
+          };
+
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+
+              if (res.success) {
+                if (res.data == 1) {
+                  $this.next("label").html("该用户名已被占用，请更换！").show();
+                  $this.focus();
+                }
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+              //                          alert("发送验证码失败，稍后重试")
+            }
+          };
+          if ($(this).val() != "") {
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        function isChinese(ele) {
+          var flag = false;
+          var real = $(ele).val();
+          var reg = /^[\u2E80-\u9FFF]+$/; //Unicode编码中的汉字范围
+
+          if (reg.test(real)) {
+            flag = true;
+
+          }
+          return flag;
+        }
+
+        function checkInput(ele) {
+
+          var flag = false;
+          var real = $(ele).val();
+          var reg = /^[\w\@.\-_]+$/; //字母数字.@_-
+
+          if (reg.test(real)) {
+            flag = true;
+
+          } else {
+            $(ele).parent().find("label.tip").html("请不要输入特殊符号或汉字!");
+
+          }
+          return flag;
+        }
+
+        $("#regPwd").blur(function() {
+          if ($(this).valid()) {
+            if (isChinese("#regPwd")) {
+              return false;
+            }
+          }
+        });
+
+        $("#regName").blur(function() {
+          if ($(this).valid()) {
+            if (!checkInput("#regName")) {
+              return false;
+            }
+          }
+        });
+        //注册用户
+        $("#btn-reg").on("click", function() {
+
+          var $this = $(this);
+
+          if ($(this).closest("form").valid()) {
+            if (!checkInput("#regName")) {
+              $("#regName").focus();
+              $("#regName").parent().find("label.tip").html("请不要输入特殊符号或汉字!");
+              return false;
+            }
+            $(this).addClass("btn-loading");
+            $(this).attr("disabled", "disabled");
+            var codeUrl = publicConfig.ApiUrl + "U002/a003.php";
+            var codeData = {
+              username: $("#regName").val(),
+              password: $("#confirmPwd").val(),
+              mobile: $("#confirmPhone").val(),
+              code: $("#confirmCode").val(),
+              platform: "WEB"
+            };
+            var response = {
+              success: function(result, response) {
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                var res = JSON.parse(result);
+                if (res.success) {
+                  login(codeData.username, codeData.password);
+                } else {
+                  alert(res.message);
+
+                }
+
+              },
+              fail: function(responseText, responseXML) {
+                alert("注册失败");
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+              }
+            };
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        //登录方法
+        function login(name, pwd, pass) {
+          var codeUrl = publicConfig.ApiUrl + "U002/a004.php";
+          var codeData = {
+            loginName: name,
+            password: pwd,
+            platform: "WEB"
+          };
+          if (pass) {
+            codeData = {
+              loginName: name,
+              code: pass,
+              platform: "WEB"
+            };
+          }
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+              if (res.success) {
+                localStorage.clear();
+                $.cookie("onlineToken", null)
+
+                $.cookie("onlineToken", res.data.token, {
+                  path: "/"
+                });
+                $.cookie("isFirstLogin", "1", {
+                  path: "/"
+                });
+                delete res.data.token;
+                if (pass) {
+                  localStorage.setItem("uPwd", pass);
+                }
+                localStorage.setItem("uInfo", JSON.stringify(res.data));
+                $(".alertarea").hide();
+                $(".layerbg").hide();
+                window.location.reload();
+              } else {
+                alert(res.message);
+                return false;
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+              alert("登录失败，请联系管理员");
+            }
+          };
+          _ajax(codeUrl, codeData, response);
+        }
+
+        $("#userPwd").on("keypress", function(event) {
+          if (event.keyCode == 13) {
+            $("#btn-login").trigger("click");
+          }
+        });
+        //用户登录
+        $("#btn-login").on("click", function() {
+          var $this = $(this);
+          if ($(this).closest("form").valid()) {
+            $(this).addClass("btn-loading");
+            $(this).attr("disabled", "disabled");
+            var codeUrl = publicConfig.ApiUrl + "U002/a004.php";
+            var codeData = {
+              loginName: $("#userName").val(),
+              password: $("#userPwd").val(),
+              platform: "WEB"
+            };
+            var response = {
+              success: function(result, response) {
+                var res = JSON.parse(result);
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                if (res.success) {
+                  var encryPwd = hex_md5($("#userPwd").val());
+                  localStorage.clear();
+                  localStorage.setItem("uPwd", encryPwd);
+                  $.cookie("onlineToken", null);
+                  $.cookie("onlineToken", res.data.token, {
+                    path: "/"
+                  });
+                  $.cookie("isFirstLogin", "1", {
+                    path: "/"
+                  });
+                  delete res.data.token;
+                  localStorage.setItem("uInfo", JSON.stringify(res.data));
+                  $(".alertarea").hide();
+                  $(".layerbg").hide();
+                  window.location.reload();
+                } else {
+                  alert(res.message);
+                  $this.removeClass("btn-loading");
+                  return false;
+                }
+
+              },
+              fail: function(responseText, responseXML) {
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                alert("登录失败，请联系管理员");
+              }
+            };
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        $("#confirmPhone").on("blur", function() {
+          if ($(this).valid()) {
+            $("#sendCode").attr("disabled", false).removeClass("disabled");
+          }
+        });
+        $("#confirmPhone").on("keyup", function() {
+
+          if ($(this).valid()) {
+            $("#sendCode").attr("disabled", false).removeClass("disabled");
+          }
+        });
+
+        //倒计时
+        function leftSeconds(j) {
+          var start = setInterval(function() {
+            j--;
+            $("#sendCode").addClass("disabled").attr("disabled", "disabled").val(j + "秒后重新发送");
+            if (j == 0) {
+              clearInterval(start);
+              $("#sendCode").addClass("disabled").attr("disabled", "disabled").val("发送验证");
+              $("#confirmPhone").removeAttr("readonly");
+              return false;
+            }
+          }, 1000);
+
+        }
+      });
+    </script>
+  </div>	<!-- 返回顶部 -->
+	<div class="returnTop" style="display: block;">
+	  <a href="#2"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/gotop.png" border="0/"></a>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- 浏览器版本不兼容提示 -->
+	<div class="lowTip">
+	  <h3 class="title">
+	  <font>看度云直播</font><span class="close">X</span></h3>
+	  <p>您的浏览器版本过低，会导致页面内容缺失，请立即升级您的浏览器</p>
+	</div>
+
+	<div class="container body-main">
+	  <!-- 首屏轮播 -->
+	  <div class="row mtop-36">
+	    <div class="mtop-36" style="width:1200px;height:540px;overflow:hidden;">
+	      <img src="img/478.jpg">
+	    </div>
+	  </div>
+
+	  <!-- 广告位 -->
+	  <div class="row mid-banner">
+	    <!-- <div class="hd">
+	      <ul>
+	        <li class="">1</li>
+	        <li class="">2</li>
+	        <li class="">3</li>
+	        <li class="">4</li>
+	        <li class="">5</li>
+	        <li class="">6</li>
+	        <li class="">7</li>
+	      </ul>
+	    </div>
+	    <div class="bd">
+	      <ul>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner01.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner02.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner03.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner04.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner05.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner06.png"></li>
+	        <li style="float: left; width: 1190px;"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/banner07.png"></li>
+	      </ul>
+	    </div> -->
+	  </div>
+
+	  <!-- 精彩推荐 -->
+	  <div class="row" id="wonderful">
+	    <div class="i-tabs i-index-anchor" data-slide="click">
+	      <div class="i-tabs-header text-center">精彩推荐</div>
+	      <div class="row recommend">
+	      		      			        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="1.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030000825.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030000825.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">大Y逆袭</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        		        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="8.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031458401.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031458401.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">丸子baby。</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        		        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="10.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031751600.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031751600.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">小蘑菇</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        		        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="12.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035344886.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035344886.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">夏天</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        		        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="16.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032651353.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032651353.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">阳崽儿宝宝</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        		        <div class="column2" style="position:relative">
+		          <i class="liveStatus liveStatus0"></i>
+		          <a target="_blank" href="18.html">
+		            <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034119133.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034119133.png" class="img-responsive" border="0" style="display: inline;">
+		          </a>
+		          <div class="zhubo-desc">
+		            <span class="name left">琴琴</span>
+		            <span class="view right">0</span>
+		            <input class="loadPage" value="1">
+		          </div>
+		        </div>
+	        	        	      </div>
+	    </div>
+	  </div>
+
+	  <!-- 特色主播 -->
+	  <div class="row" style="margin-top:45px;">
+	    <div class="i-tabs i-index-anchor" id="speciall" data-slide="click">
+	      <div class="i-tabs-header text-center left">特色主播</div>
+	      <div class="i-tabs-nav">
+	        <ul class="navbar-speciall">
+	          <li class="i-tabs-item i-tabs-active" data-tid="2">热门</li>
+	          <li class="i-tabs-item" data-tid="3">推荐</li>
+	        </ul>
+	      </div>
+	      <div class="clearfix"></div>
+	      <div class="i-tabs-container" id="speciallTab">
+	        <div class="i-tabs-content" id="type2" style="display: block;">
+	        		        			          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="12.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035344886.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035344886.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">夏天</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="11.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035320165.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807035320165.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">猫牙</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="10.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031751600.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031751600.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">小蘑菇</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="9.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031614528.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031614528.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">David</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="8.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031458401.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031458401.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">丸子baby。</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="7.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031336870.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031336870.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">看看你</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="6.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031211635.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031211635.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">宇涵</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="5.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031040612.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031040612.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">精彩欧总_喊麦大手</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="4.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030917277.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030917277.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">鱼爸爸</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="3.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030744136.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030744136.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">喋喋不休</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="2.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030513487.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030513487.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">梦梦同学</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="1.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030000825.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807030000825.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">大Y逆袭</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          	          	        </div>
+
+	        <div class="i-tabs-content" id="type3" style="display: none;">
+														          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="http://candocloud.cn/html/zhubo/remen/2017/0807/19.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034240892.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034240892.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">捏捏捏姑娘</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="18.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034119133.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807034119133.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">琴琴</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="http://candocloud.cn/html/zhubo/remen/2017/0807/17.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807033158317.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807033158317.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">遗失的美好</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="16.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032651353.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032651353.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">阳崽儿宝宝</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="http://candocloud.cn/html/zhubo/remen/2017/0807/15.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032557610.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032557610.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">瑶瑶</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="http://candocloud.cn/html/zhubo/remen/2017/0807/14.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032428156.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032428156.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">Cobain</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          		          <div class="column2" style="position:relative">
+		            <i class="liveStatus"></i>
+		            <a target="_blank" href="http://candocloud.cn/html/zhubo/remen/2017/0807/13.html">
+		              <img width="191" height="191" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032333481.png" data-original="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807032333481.png" class="img-responsive" border="0" style="display: inline;">
+		            </a>
+		            <div class="zhubo-desc">
+		              <span class="name left">666666</span>
+		              <span class="view right">0</span>
+		              <input class="loadPage" value="1">
+		            </div>
+		          </div>
+	          	          	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+  <div id="script-block">
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/customplugin.js"></script>
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.validate.js"></script>
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.cookie.js"></script>
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.validate.cn.js"></script>
+    <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.lazyload.min.js"></script>
+  </div>
+
+  <!-- 底部 -->
+  <div class="row site-footer footerblock">
+    <div class="container" style="margin-top: 50px;">
+      <ul class="bot">
+        <!-- <li class="level-1">
+          <img src="http://demo.app.cditv.cn/statics/kdyzb/images/bot-logo.png" style="width:100px;height:100px;">
+        </li> -->
+        <li class="level-1">
+          <a class="level-1" href="#2">关于我们</a>
+          <ul class="sub">
+            <li>
+              <a href="#3" class="tm_1">邮箱
+                <font style="font-size:16px">(service@omtech.cn)</font>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="level-1">
+          <a class="level-1" href="#2">帮助</a>
+          <ul class="sub">
+            <li>
+              <a href="#1">主播签约</a>
+            </li>
+            <li>
+              <a href="#1">主播等级</a>
+            </li>
+            <li>
+              <a href="#1">财富等级</a>
+            </li>
+            <li>
+              <a href="#">更多帮助</a>
+            </li>
+          </ul>
+        </li>
+        <li class="level-1">
+          <a class="level-1" href="#2">合作</a>
+          <ul class="sub">
+            <li>
+              <a href="#1">授权信息</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+      <hr class="line" style="margin-bottom: 0;">
+    </div>
+
+    <div class="row text-center white copyright">
+      <a href="#3" rel="nofollow">蜀ICP备17030673号-4</a> |
+
+      <a href="#3" rel="nofollow">成都晚八点文化传播有限公司 </a> |
+
+      <a href="#3" rel="nofollow"> 四川省成都市金牛区抚琴西路115号5层519号</a>
+
+      <br>
+      <a href="#3" rel="nofollow">4000-251-907</a>
+    </div>
+
+    <script>
+      function bodyName() {
+        var _doc = document.documentElement,
+          _docWidth = _doc.clientWidth;
+
+        if(_docWidth < 1320) {
+          document.body.className = 'page-w1320';
+        } else if(_docWidth < 1560) {
+          document.body.className = 'page-w1560';
+        } else if(_docWidth > 1800) {
+          document.body.className = 'page-w1800';
+        } else {
+          document.body.className = 'page-default';
+        }
+      }
+      jQuery(function($) {
+        bodyName();
+        $(window).resize(function() {
+          bodyName();
+        });
+      });
+    </script>
+  </div></body></html>

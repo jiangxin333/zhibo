@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html data-livestyle-extension="available"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>舞邦KOLO</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/base.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/share.min.css" rel="stylesheet">
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/uploadify.css" rel="stylesheet">
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/chat_red.css" rel="stylesheet">
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/room.css" rel="stylesheet">
+  <link href="http://demo.app.cditv.cn/statics/kdyzb/css/gift.css" rel="stylesheet">
+
+
+  <script src="https://hm.baidu.com/hm.js?1e5447384b2442d7ed8fc141c95b5b43"></script><script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.uploadify.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/common.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/giftList.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.validate.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.validate.cn.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.nicescroll.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.cookie.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.SuperSlide.2.1.1.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/customplugin.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/jquery.lazyload.min.js"></script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/html5.min.js"></script>
+  <script src="http://demo.app.cditv.cn/statics/kdyzb/js/respond.min.js"></script>
+  <![endif]-->
+
+  <style type="text/css" media="screen">
+    #flashContent {
+      visibility: hidden
+    }
+
+    #flashContent {
+      display: block;
+      text-align: left;
+    }
+    #GiftEffect {
+      visibility: hidden
+    }
+
+    #GiftEffect {
+      display: block;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    &amp;lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="DaorongPlayer"&amp;gt; &amp;lt;param name="movie" value="DaorongPlayer.swf" /&amp;gt; &amp;lt;param name="quality" value="high" /&amp;gt; &amp;lt;param name="bgcolor" value="#ffffff" /&amp;gt; &amp;lt;param name="allowScriptAccess" value="sameDomain" /&amp;gt; &amp;lt;param name="allowFullScreen" value="true" /&amp;gt; &amp;lt;param name="wmode" value="transparent" /&amp;gt; &amp;lt;!--[if !IE]&amp;gt;--&amp;gt; &amp;lt;object type="application/x-shockwave-flash" data="DaorongPlayer.swf" width="800" height="600"&amp;gt; &amp;lt;param name="quality" value="high" /&amp;gt; &amp;lt;param name="bgcolor" value="#ffffff" /&amp;gt; &amp;lt;param name="allowScriptAccess" value="sameDomain" /&amp;gt; &amp;lt;param name="allowFullScreen" value="true" /&amp;gt; &amp;lt;param name="wmode" value="transparent" /&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;!--[if gte IE 6]&amp;gt;--&amp;gt; &amp;lt;p&amp;gt; Either scripts and active content are not permitted to run or Adobe Flash Player version 11.4.0 or greater is not installed. &amp;lt;/p&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;a href="http://www.adobe.com/go/getflashplayer"&amp;gt; &amp;lt;img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" /&amp;gt; &amp;lt;/a&amp;gt; &amp;lt;!--[if !IE]&amp;gt;--&amp;gt; &amp;lt;/object&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;/object&amp;gt;
+  </noscript>
+  <noscript>
+    &amp;lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="DaorongPlayer"&amp;gt; &amp;lt;param name="movie" value="GiftEffect.swf" /&amp;gt; &amp;lt;param name="quality" value="high" /&amp;gt; &amp;lt;param name="bgcolor" value="#ffffff" /&amp;gt; &amp;lt;param name="allowScriptAccess" value="sameDomain" /&amp;gt; &amp;lt;param name="allowFullScreen" value="true" /&amp;gt; &amp;lt;param name="wmode" value="transparent" /&amp;gt; &amp;lt;!--[if !IE]&amp;gt;--&amp;gt; &amp;lt;object type="application/x-shockwave-flash" data="GiftEffect.swf" width="800" height="600"&amp;gt; &amp;lt;param name="quality" value="high" /&amp;gt; &amp;lt;param name="bgcolor" value="#ffffff" /&amp;gt; &amp;lt;param name="allowScriptAccess" value="sameDomain" /&amp;gt; &amp;lt;param name="allowFullScreen" value="true" /&amp;gt; &amp;lt;param name="wmode" value="transparent" /&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;!--[if gte IE 6]&amp;gt;--&amp;gt; &amp;lt;p&amp;gt; Either scripts and active content are not permitted to run or Adobe Flash Player version 11.4.0 or greater is not installed. &amp;lt;/p&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;a href="http://www.adobe.com/go/getflashplayer"&amp;gt; &amp;lt;img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" /&amp;gt; &amp;lt;/a&amp;gt; &amp;lt;!--[if !IE]&amp;gt;--&amp;gt; &amp;lt;/object&amp;gt; &amp;lt;!--&amp;lt;![endif]--&amp;gt; &amp;lt;/object&amp;gt;
+  </noscript>
+
+
+  <div class="site-header-room w1400">
+    <div class="filterbg"></div>
+
+    <!-- 导航菜单 -->
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container-fluid">
+        <a class="left logo" style="clear: both;" href="index.html"><img src=""></a>
+        <div class="container header-area">
+          <div class="site-menu left row">
+            <ul class="login-area right beforelogin">
+              <li>
+                <a href="#2" class="btn btn-red btn-small loginLink">登录</a>
+              </li>
+              <li>
+                <a href="#2" class="btn btn-white btn-small registLink">注册</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 登陆注册 -->
+    <div class="login-action alertarea" style="position: absolute; margin-top: -265px; margin-left: -375px; z-index: 9999; width: 750px; height: 530px; display: none;">
+      <div class="i-tabs i-login-tabs" data-slide="click">
+        <span class="i-tabs-left"></span>
+        <span class="i-tabs-right"></span>
+        <div class="i-tabs-nav">
+          <ul>
+            <li class="i-tabs-item i-tabs-active" data-property="login">登录</li>
+            <li class="i-tabs-item" data-property="register">注册</li>
+          </ul>
+        </div>
+        <div class="i-tabs-container left">
+          <div class="i-tabs-content" data-property="login" style="display: block;">
+            <div class="col-md-7">
+              <form>
+                <div class="form-group">
+                  <h4>看度账号登录</h4>
+                </div>
+                <div class="form-group">
+                  <input type="text" required="" class="form-control" id="userName" placeholder="看度账号">
+                </div>
+                <div class="form-group">
+                  <input type="password" required="" class="form-control" id="userPwd" placeholder="密码">
+                </div>
+                <button type="button" id="btn-login" class="btn btn-red btn-long">登录</button>
+                <a href="#" style="color:#010101;font-size:12px;margin-left: 20px;" class="forgotPassword">找回密码</a>
+              </form>
+            </div>
+          </div>
+          <div class="i-tabs-content" data-property="register" style="display: none;">
+            <div class="col-md-7">
+              <form>
+                <div class="form-group">
+                  <h4>看度账号注册</h4>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="regName" required="" placeholder="请输入您的账号">
+                  <label class="tip"></label>
+                </div>
+                <div class="form-group">
+                  <input type="password" minlength="6" maxlength="15" class="form-control" id="regPwd" required="" placeholder="请输入您的密码">
+                </div>
+                <div class="form-group">
+                  <input type="password" minlength="6" maxlength="15" class="form-control" equalto="#regPwd" id="confirmPwd" required="" placeholder="请确认您的密码">
+                </div>
+                <div class="form-group">
+                  <input class="form-control " type="mobile" id="confirmPhone" required="" placeholder="请确认您的手机号，每个号码最多可用五次">
+                </div>
+                <div class="form-group">
+                  <input class="form-control left " style="display:inline-block;width:120px" id="confirmCode" placeholder="请确认验证码">
+                  <input class="btn btn-red disabled btn-middle right" type="button" disabled="disabled" id="sendCode" style="white-space:nowrap;width:auto;padding:0 10px;display: inline-block;margin-right:5px;" value="发送验证">
+                </div>
+                <div class="form-group">
+                  <button type="button" id="btn-reg" class="btn btn-red btn-long">同意并注册</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="close">×</span>
+    </div>
+    <script>
+      jQuery(function($) {
+
+        changeTabs();
+
+        var input = document.createElement('input');
+        if ("placeholder" in input) {
+        } else {
+          $("input[type='text'],input[type='mobile']").each(function() {
+            if ($(this).attr("placeholder") != "undefined") {
+              $(this).val($(this).attr("placeholder"));
+              var tip = $(this).attr("placeholder");
+              $(this).focus(function() {
+                $(this).val("");
+              });
+              $(this).blur(function() {
+                if ($(this).val() == "") {
+                  $(this).val(tip);
+                }
+              });
+            }
+          });
+          $("input[type='password']").each(function() {
+
+            var tip = $(this).attr("placeholder");
+            $(this).closest("div").append("<label class='replaceWZ'>" + tip + "</label>");
+            $(this).focus(function() {
+              $(this).closest("div").find("label.replaceWZ").remove();
+            });
+            $(this).blur(function() {
+              if ($(this).val() == "") {
+                $(this).closest("div").append("<label class='replaceWZ'>" + tip + "</label>");
+              }
+            });
+          });
+          $("label.replaceWZ").on('click', function() {
+            $(this).closest("div").find("input").focus();
+            $(this).remove();
+          });
+        }
+
+
+        $(".btn").on("mouseover", function() {
+          $(this).addClass("btn-hover");
+        }).on("mouseout", function() {
+          $(this).removeClass("btn-hover");
+        });
+        $("form input").on("blur", function() {
+          $(this).valid();
+        });
+
+        var userObj = "";
+        if (localStorage.getItem('uInfo')) {
+          userObj = JSON.parse(localStorage.getItem('uInfo'));
+
+        }
+
+        //  登陆注册弹框
+        $("a.loginLink").on("click", function() {
+          customPlugins.alertTip(".login-action", 450, 530, true);
+          $(".i-tabs-item[data-property='login']").addClass("i-tabs-active").siblings().removeClass("i-tabs-active");
+          $(".i-tabs-content[data-property='login']").show().siblings().hide();
+        });
+        $("a.registLink").on("click", function() {
+          customPlugins.alertTip(".login-action", 450, 530, true);
+          $(".i-tabs-item[data-property='register']").addClass("i-tabs-active").siblings().removeClass("i-tabs-active");
+          $(".i-tabs-content[data-property='register']").show().siblings().hide();
+        });
+
+        //发送验证码
+        $("#sendCode").on("click", function() {
+          $(this).addClass("disabled").attr("disabled", "disabled");
+          $("#confirmPhone").attr("readonly", true);
+          $(this).val("发送中...");
+          var $this = $(this);
+          var codeUrl = publicConfig.ApiUrl + "U002/a001.php";
+          var codeData = {
+            mobile: $("#confirmPhone").val()
+          };
+          leftSeconds(60);
+          //          return false;
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+
+              if (res.success) {
+
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+            }
+          };
+          // _ajax(codeUrl, codeData, response);
+        });
+
+        //检测用户名是否重复
+        $("#regName").on("blur", function() {
+          var $this = $(this);
+          if (isChinese("#regName")) {
+            $(this).focus();
+            $this.next("label").html("请不要输入汉字！");
+
+            return false;
+          }
+          if ($this.valid()) {
+            $this.parent().find("label.tip").html("");
+          }
+          var codeUrl = publicConfig.ApiUrl + "U002/a002.php";
+          var codeData = {
+            username: $(this).val()
+          };
+
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+
+              if (res.success) {
+                if (res.data == 1) {
+                  $this.next("label").html("该用户名已被占用，请更换！").show();
+                  $this.focus();
+                }
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+              //              alert("发送验证码失败，稍后重试")
+            }
+          };
+          if ($(this).val() != "") {
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        function isChinese(ele) {
+          var flag = false;
+          var real = $(ele).val();
+          var reg = /^[\u2E80-\u9FFF]+$/; //Unicode编码中的汉字范围
+
+          if (reg.test(real)) {
+            flag = true;
+          }
+          return flag;
+        }
+
+        function checkInput(ele) {
+
+          var flag = false;
+          var real = $(ele).val();
+          var reg = /^[\w\@.\-_]+$/; //字母数字.@_-
+
+          if (reg.test(real)) {
+            flag = true;
+
+          } else {
+            $(ele).parent().find("label.tip").html("请不要输入特殊符号或汉字!");
+
+          }
+          return flag;
+        }
+
+        $("#regName").blur(function() {
+          if ($(this).valid()) {
+            if (!checkInput("#regName")) {
+              return false;
+            }
+          }
+        });
+        $("#regPwd").blur(function() {
+          if ($(this).valid()) {
+            if (isChinese("#regPwd")) {
+              return false;
+            }
+          }
+        });
+
+        //注册用户
+        $("#btn-reg").on("click", function() {
+          var $this = $(this);
+          if ($(this).closest("form").valid()) {
+            if (!checkInput("#regName")) {
+              $("#regName").focus();
+              $("#regName").parent().find("label.tip").html("请不要输入特殊符号或汉字!");
+              return false;
+            }
+            $(this).addClass("btn-loading");
+            $(this).attr("disabled", "disabled");
+            var codeUrl = publicConfig.ApiUrl + "U002/a003.php";
+            var codeData = {
+              username: $("#regName").val(),
+              password: $("#confirmPwd").val(),
+              mobile: $("#confirmPhone").val(),
+              code: $("#confirmCode").val(),
+              platform: "WEB"
+            };
+            var response = {
+              success: function(result, response) {
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                var res = JSON.parse(result);
+                if (res.success) {
+                  login();
+                } else {
+                  alert(res.message);
+
+                }
+
+              },
+              fail: function(responseText, responseXML) {
+                alert("注册失败");
+
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+              }
+            }
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        //登录方法
+        function login(name, pwd, pass) {
+          var codeUrl = publicConfig.ApiUrl + "U002/a004.php";
+          var codeData = {
+            loginName: name,
+            password: pwd,
+            platform: "WEB"
+          };
+          if (pass) {
+            codeData = {
+              loginName: name,
+              code: pass,
+              platform: "WEB"
+            };
+          }
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+              if (res.success) {
+                localStorage.clear();
+                $.cookie("onlineToken", null)
+
+                $.cookie("onlineToken", res.data.token, {
+                  path: "/"
+                });
+                $.cookie("isFirstLogin", "1", {
+                  path: "/"
+                });
+                delete res.data.token;
+                if (pass) {
+                  localStorage.setItem("uPwd", pass);
+                }
+                localStorage.setItem("uInfo", JSON.stringify(res.data));
+                $(".alertarea").hide();
+                $(".layerbg").hide();
+                window.location.reload();
+              } else {
+                alert(res.message);
+                return false;
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+              alert("登录失败，请联系管理员");
+            }
+          }
+          // _ajax(codeUrl, codeData, response);
+        }
+
+        $("#userPwd").on("keypress", function(event) {
+          if (event.keyCode == 13) {
+            $("#btn-login").trigger("click");
+          }
+        });
+        //用户登录
+        $("#btn-login").on("click", function() {
+          var $this = $(this);
+          if ($(this).closest("form").valid()) {
+            $(this).addClass("btn-loading");
+            $(this).attr("disabled", "disabled");
+            var codeUrl = publicConfig.ApiUrl + "U002/a004.php";
+            var codeData = {
+              loginName: $("#userName").val(),
+              password: $("#userPwd").val(),
+              platform: "WEB"
+            };
+            var response = {
+              success: function(result, response) {
+                var res = JSON.parse(result);
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                if (res.success) {
+                  localStorage.clear();
+
+                  var encryPwd = hex_md5($("#userPwd").val());
+
+                  localStorage.setItem("uPwd", encryPwd);
+
+                  var userAu = res.data.token;
+                  $.cookie("onlineToken", null);
+                  $.cookie("onlineToken", userAu, {
+                    path: "/"
+                  });
+
+                  $.cookie("isFirstLogin", "1", {
+                    path: "/"
+                  });
+                  delete res.data.token;
+
+                  localStorage.setItem("uInfo", JSON.stringify(res.data));
+
+                  $(".alertarea").hide();
+                  $(".layerbg").hide();
+                  window.location.reload();
+                } else {
+                  alert(res.message);
+                  return false;
+                }
+
+              },
+              fail: function(responseText, responseXML) {
+                $this.removeClass("btn-loading");
+                $this.removeAttr("disabled");
+                alert("登录失败，请联系管理员");
+              }
+            };
+            // _ajax(codeUrl, codeData, response);
+          }
+        });
+
+        $("#confirmPhone").on("blur", function() {
+          if ($(this).valid()) {
+            $("#sendCode").attr("disabled", false).removeClass("disabled");
+          }
+        });
+        $("#confirmPhone").on("keyup", function() {
+
+          if ($(this).valid()) {
+            $("#sendCode").attr("disabled", false).removeClass("disabled");
+          }
+        });
+
+        //倒计时
+        function leftSeconds(j) {
+          var start = setInterval(function() {
+            j--;
+            $("#sendCode").addClass("disabled").attr("disabled", "disabled").val(j + "秒后重新发送");
+            if (j == 0) {
+              clearInterval(start);
+              $("#sendCode").addClass("disabled").attr("disabled", "disabled").val("发送验证");
+              $("#confirmPhone").removeAttr("readonly");
+              return false;
+            }
+          }, 1000);
+
+        }
+
+        function searchRoom(uid) {
+
+          var anchorUrl = publicConfig.ApiUrl + "U002/a011.php"; //根据房间号查询主播信息
+          var anchorData = {
+            userNO: uid
+          };
+          var response = {
+            success: function(result, response) {
+              var res = JSON.parse(result);
+
+              if (res.success) {
+                var room = res.data.chatroomId;
+                location.href = "../../../html/room.html?roomId=" + uid;
+              } else {
+                alert(res.message);
+              }
+
+            },
+            fail: function(responseText, responseXML) {
+
+            }
+          };
+          // _ajax(anchorUrl, anchorData, response);
+        }
+        $(".search-input>input").on("keypress", function(event) {
+          if (event.keyCode == 13) {
+            searchRoom($(this).val());
+          }
+        });
+        $(".searchIcon").on("click", function() {
+          var roomNO = $(".search-input>input").val();
+          searchRoom(roomNO);
+        });
+      });
+    </script>
+  </div>
+
+  <div class="clearfix"></div>
+
+
+  <div class="container" style="position: relative;">
+
+    <div class="row anchorInfo room_anchor">
+      <div class="row">
+        <div class="anchor-left left">
+          <div class="left anchor-base">
+            <span class="left">
+              <img width="61" class="photo" height="61" align="left" src="http://demo.app.cditv.cn/uploadfile/2017/0807/20170807031211635.png">
+            </span>
+            <span class="left account">
+              <span class="wz14" style="margin-bottom: 3px;">
+                <span class="daili-1" style="clear: none;margin:0 8px 0 5px;"></span>
+                <span style="clear: none;margin-left: 5px;" class="nickname">宇涵</span>
+              </span>
+              <span class="livelevelItem livelevel2" style="margin-right:4px" title="当前级别">2星</span>
+              <span class="greyEXP" style="clear: none;">
+                <span style="width:11.5%"></span>
+              </span>
+              <span class="livelevelItem livelevel3" style="clear: none;margin-left:4px" title="下一级别">3星</span>
+              <span class="wz12 wealth-gold" style="margin-top:3px;margin-bottom: 7px;font-size:12px"><b>距离下一级还差：<font>578</font></b> 钻石</span>
+              <span class="wz10" style="font-size: 10px;">房间号：6</span>
+            </span>
+          </div>
+
+          <div class="left share-area" style="padding-top: 3px;margin-top:15px;position:relative">
+            <button class="btn btn-follow btn-yellow padding17" style="font-size: 12px;border:medium none">关注</button>
+            <button class="btn btn-share btn-red padding17" style="font-size: 12px;"> 分享 </button>
+            <br>
+            <span class="time-area" title="开播时间"><i class="playTime"></i></span>
+            <div id="share-2" class="share-info share-component social-share" style="display: none;">
+              <a class="social-share-icon icon-weibo" href="#" target="_blank"></a>
+              <a class="social-share-icon icon-wechat" href="#3" tabindex="-1">
+                <div class="wechat-qrcode bottom">
+                  <h4>微信扫一扫：分享</h4>
+                  <div class="qrcode">
+                    <img src=""></div>
+                  <div class="help">
+                    <p>微信里点“发现”，扫一下</p>
+                    <p>二维码便可将本文分享至朋友圈。</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="anchor-right"></div>
+      </div>
+    </div>
+
+    <!-- 直播界面 -->
+    <div class="row main-area">
+      <div class="play-area left">
+        <div class="row">
+          <div class="video-area showControl" id="player" style="background:#000000">
+            <div class="player-action">
+              <div id="flashContent" style="visibility: visible;">
+                <p>
+                  检测到您的机器没有安装最新的 Adobe Flash Player.
+                </p>
+                  <script type="text/javascript">
+                    var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+                    document.write("<a href='#' style='color:#010101'>请点击下载最新版</a>");
+                  </script><a href="#" style="color:#010101">请点击下载最新版</a>
+                <a href="#" style="color:#010101">请点击下载最新版</a>
+              </div>
+            </div>
+            <div class="object-layer" id="roomTip" style=""><span class="btn-play btn-middle">主播当前没有直播，<br>去<a href="index.html">首页</a>逛逛吧！</span></div>
+            <div class="giftPlayer-area">
+              <div id="GiftEffect" style="visibility: visible;"></div>
+            </div>
+            <div class="player-control">
+              <span class="volumn"></span>
+              <div id="rating-22"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row giftbg" style="position: relative;" id="room_gift_panel">
+          <div class="room-blank" style="padding:0px;margin:0;">
+            <img align="center" src="">
+          </div>
+          <div class="i-tabs i-gift-tabs nav-gift i-storage" data-slide="click" style="display: none;">
+            <div class="i-storage-bg"></div>
+            <!-- Tabs within a box -->
+            <ul class="i-tabs-nav" style="height:30px;position:relative">
+              <li class="i-tabs-item i-tabs-active"><span>低级</span></li>
+              <li class="i-tabs-item"><span>中级</span></li>
+              <li class="i-tabs-item i-tabs-active"><span>高级</span></li>
+            </ul>
+            <div class="blackbg"></div>
+            <div class="i-tabs-container" style="overflow: hidden;z-index:103;position:relative">
+            </div>
+          </div>
+          <div class="gift-footer">
+            <span class="left gifts">
+              <i class="icon"></i>
+              <a href="#2">礼物宝箱</a>
+              <i class="arrow"></i>
+            </span>
+            <span class="i-show left mright-10 mleft-10">数量：<input type="text" class="input-number" id="giftNum" value="1" onkeyup="this.value=this.value.replace(/^0+|\D/g,'').substring(0,4)" onafterpaste="this.value=this.value.replace(/^0+|\D/g,'').substring(0,4)">
+              <ul class="relative-list giftcount">
+                <li data-num="50" class="gift50">50</li>
+                <li data-num="100" class="gift100">100</li>
+                <li data-num="300" class="gift300">300</li>
+                <li data-num="520" class="gift520">520</li>
+                <li data-num="666" class="gift666">666</li>
+                <li data-num="999" class="gift999">999</li>
+                <li data-num="1314" class="gift1314">1314</li>
+              </ul>
+              <span class="arrow"></span>
+            </span>
+            <span class="i-show left">给：<input type="text" class="input-sendUser" id="sendUser" readonly="" value="房间主播" data-uid="122229">
+              <ul class="relative-list sendList" style="left:0">
+                <li data-uid="122229">宇涵</li>
+              </ul>
+              <span class="arrow"></span>
+            </span>
+            <span class="right mright-10">
+              <label title="仅收礼人知道您的身份"><input type="checkbox" name="annoy" value="1" style="vertical-align:middle;margin-bottom:2px;"><font color="#D1D1D1">匿名送礼</font></label>
+              <button class="btn sendGift btn-orange btn-charge btn-small">赠送</button>
+              <a href="javascript:void(0);" class="btn btn-orange btn-charge btn-small" target="_blank">充值</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="chat-area left " style="padding-left:0;">
+        <div class="room-ranking">
+          <a class="ranking-btn">
+            <span class="s1">本场<br>榜单<i></i></span>
+          </a>
+          <div class="ranking-list">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="i-gift-tabs i-tabs giftbg i-chat-area" style="margin-top:70px" data-slide="click">
+          <ul class="i-tabs-nav nav nav-tabs ">
+            <li class="i-tabs-item i-tabs-active">全部</li>
+            
+          </ul>
+          <div class="i-tabs-container" style="position:relative">
+            <div class="i-tabs-content" id="allInfo" style="position: relative; display: block;">
+              <div class="watch-chat" id="watchChat">
+                <div class="watch-chat-box room-chat-bg" id="all_chat" data-tracing="all_chat" style=" display: block;">
+                  <div class="room_notice" data-tracing="iqg9ruc4">
+                    <span class="title">【房间公告】：</span>
+                    <span class="pay-px">
+                      <a style="display: none;" class="showProxyCode" href="#2" target="_blank ">充值优惠</a>
+                      <span class="notice">欢迎各位来到我的直播间</span>
+                      <div class="proxyCodeArea"></div>
+                    </span>
+                  </div>
+                  <div class="chat-public-area scroll-bar">
+                    <div id="chat_hall" class="stream chat-area pubarea">
+                      <ul class="message-list chat-pub" id="upChat" style="overflow: auto;">
+                        <li><span class="user visitor">游客</span>来了，欢迎</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div style="border-bottom: solid 1px #d1d1d1;"></div>
+                  <div id="watchChat_pri" class="chat-private-area scroll-bar">
+                    <div class="stream chat-area privatearea" id="chat_hall_private">
+                      <ul class="message-list chat-private" style="overflow: auto;height: 155px;margin-top: 0px;"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="i-tabs-content" id="games" style="position: relative; display: none;">
+              <ul class="list gamelist">
+                                                  <li>
+                    <span>
+                      <a href="http://candocloud.cn/html/youxi/2017/0807/20.html">
+                          <img src="http://demo.app.cditv.cn/uploadfile/2017/0809/20170809101155299.jpg" width="51" height="41"><br>大家乐麻将                      </a>
+                    </span>
+                  </li>
+                                              </ul>
+            </div>
+          </div>
+          <!-- <div class="message-area">
+            <span class="i-show left" style="margin:8px 20px 0 0;">
+              <input type="text" class="input-chatUser" readonly="readonly" style="width:93px" id="chatUser" value="所有人" data-uid="">
+              <ul class="relative-list chatList" style="left:0px">
+                <li data-uid="" data-name="">所有人</li>
+                <li data-uid="122229">宇涵</li>
+              </ul>
+              <span class="arrow"></span>
+            </span>
+            <input type="checkbox" id="private">
+            <span class="white12">悄悄话</span>
+            <span class="emotion"><img src="http://demo.app.cditv.cn/statics/kdyzb/images/smile-face.png"></span>
+            <br>
+            <input id="myMessage" style="width:85%">
+            <button class="btn btn-hover" id="send">发送</button>
+            <div id="facebox"></div>
+          </div> -->
+        </div>
+      </div>
+      <div class="roomuser-area right">
+        <div id="messages" style="display: none;"></div>
+        <div class="i-gift-tabs i-tabs giftbg i-roomusers-area" data-slide="click">
+          <ul class="i-tabs-nav guarden">
+            <li class="i-tabs-item i-tabs-active" style="background:#f6f1e6;height:38px;line-height: 38px;text-align: center;">守护<span class="guarden">(<font class="online">0</font>/<font class="total">0</font>)</span></li>
+            <li style="width:45px;">
+              <button class="btn btn-guarden">开通</button>
+            </li>
+          </ul>
+          <div class="i-tabs-container" style="background:#f6f1e6;height:128px;overflow:auto;margin-bottom:5px">
+            <ul class="guarden-list"></ul>
+          </div>
+        </div>
+        <div class="i-gift-tabs i-tabs giftbg i-roomusers-area" data-slide="click">
+          <ul class="i-tabs-nav user-area">
+            <li class="i-tabs-item i-tabs-active" style="padding-bottom:8px;padding-top:5px;line-height: 110%;text-align: center;">观众列表
+              <br><span class="onlineNum">0</span></li>
+            <li class="i-tabs-item" style="padding-bottom:8px;padding-top:5px;line-height: 110%;text-align: center;">管理列表
+              <br><span class="onlineManager">1</span></li>
+          </ul>
+          <div class="i-tabs-container user-container" style="background:#f6f1e6;">
+            <div class="i-tabs-content" style="display: block;">
+              <ul class="watcher-list" style="position:relative">
+                <li id="122229" level="0"><span class="name">宇涵</span><span class="listGuard"></span><span class="vip"></span> <span class="manlevel"></span> <span style="position: relative;width:35px;margin-right:0px;" class="livelevelItem  livelevel2"><span class="shinelevel shinelevel0">闪耀0星</span>0富</span> <span daili="122229" class="daili-1"></span>
+                  <font>6</font>
+                  <div class="detail-profile"> <b>宇涵</b>
+                    <hr>
+                    <br>
+                    <ul class="yunying">
+                      <li data-id="122229" data-nickname="宇涵" onclick="kickUser(122229)" class="kick-person">踢出</li>
+                      <li data-id="122229" data-nickname="宇涵" onclick="forbiddenSay(122229)" class="forbidden-say">禁言</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="cacelforbiddenSay(122229)">恢复发言</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="forbiddenPlay()">禁用主播</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="cacelforbiddenPlay()">恢复主播</li>
+                      <li class="border"></li>
+                    </ul>
+                    <ul class="action">
+                      <li data-id="122229" data-nickname="宇涵" class="public-talk">公开说</li>
+                      <li data-id="122229" data-nickname="宇涵" class="private-talk">悄悄说</li>
+                      <li data-id="122229" data-nickname="宇涵" class="focus" onclick="ConcernUser(122229)">关注</li>
+                      <li data-id="122229" data-nickname="宇涵" class="send-gift">送礼物</li>
+                      <li data-id="122229" data-nickname="宇涵" class="personal-profile"> <a href="#2" livenextlevelgold="5000" chatroomid="20637846405122" level="0" livelevel="1" usertype="2" portrait="http://res.daorongwangluo.com/resource?t=0D2D5294A5E30777&amp;n=2017_07_6_122229.png&amp;v=0.1482942334920716" uid="122229" nickname="宇涵" nextlevelgold="1000" shinelevel="0" userno="200222522" onclick="getUserProfile(122229)">个人资料</a> </li>
+                      <li data-id="122229" data-nickname="宇涵" class="into-room"> <a href="http://www.wenzib.com/html/room.html?roomId=200222522" target="_blank">进入房间</a> </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <!-- <div class='visitor-num' style="position:absolute;bottom:0;left:0">房间游客：
+
+                <font>0</font>
+
+              </div> -->
+            </div>
+            <div class="i-tabs-content" style="display: none;">
+              <ul class="manager-list">
+                <li id="122229" level="0"><span class="name">宇涵</span><span class="listGuard"></span><span class="vip"></span> <span class="manlevel"></span> <span style="position: relative;width:35px;margin-right:0px;" class="livelevelItem  livelevel2"><span class="shinelevel shinelevel0">闪耀0星</span>0富</span> <span daili="122229" class="daili-1"></span>
+                  <font>6</font>
+                  <div class="detail-profile"> <b>宇涵</b>
+                    <hr>
+                    <!--             <span _tmplitem="2"  class='levelInfo'><span _tmplitem="2"  class="livelevelItem livelevel1" style="width:35px;float:none;position:relative;margin-top:3px;"><span _tmplitem="2"  class="shinelevel shinelevel0">闪耀0星</span>1星</span>200222522</span>      -->
+                    <br>
+                    <ul class="yunying">
+                      <li data-id="122229" data-nickname="宇涵" onclick="kickUser(122229)" class="kick-person">踢出</li>
+                      <li data-id="122229" data-nickname="宇涵" onclick="forbiddenSay(122229)" class="forbidden-say">禁言</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="cacelforbiddenSay(122229)">恢复发言</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="forbiddenPlay()">禁用主播</li>
+                      <li data-id="122229" data-nickname="宇涵" class="cancel-forbidden" onclick="cacelforbiddenPlay()">恢复主播</li>
+                      <li class="border"></li>
+                    </ul>
+                    <ul class="action">
+                      <li data-id="122229" data-nickname="宇涵" class="public-talk">公开说</li>
+                      <li data-id="122229" data-nickname="宇涵" class="private-talk">悄悄说</li>
+                      <li data-id="122229" data-nickname="宇涵" class="focus" onclick="ConcernUser(122229)">关注</li>
+                      <li data-id="122229" data-nickname="宇涵" class="send-gift">送礼物</li>
+                      <li data-id="122229" data-nickname="宇涵" class="personal-profile"> <a href="#2" livenextlevelgold="5000" chatroomid="20637846405122" level="0" livelevel="1" usertype="2" portrait="http://res.daorongwangluo.com/resource?t=0D2D5294A5E30777&amp;n=2017_07_6_122229.png&amp;v=0.1482942334920716" uid="122229" nickname="宇涵" nextlevelgold="1000" shinelevel="0" userno="200222522" onclick="getUserProfile(122229)">个人资料</a> </li>
+                      <li data-id="122229" data-nickname="宇涵" class="into-room"> <a href="http://www.wenzib.com/html/room.html?roomId=200222522" target="_blank">进入房间</a> </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body></html>

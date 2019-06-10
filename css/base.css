@@ -1,0 +1,26 @@
+.page-w1320 .site-footer, .page-w1320 .filterbg, .page-w1560 .site-footer, .page-w1560 .filterbg{width: 100%;}
+.login-action{margin-top: 0!important;}
+.i-index-anchor .column2 .zhubo-desc .name{}
+.i-index-anchor .column2 .zhubo-desc .view{}
+.i-index-anchor .column2 .zhubo-desc{background: cadetblue;}
+.i-index-anchor .i-tabs-header{color: #000000;    background: inherit;}
+.footerblock{background: cadetblue;}
+body{background:#F5F5F5;}
+.mid-banner{border: solid 5px cadetblue;}
+.mtop-36 img{width: 100%;}
+.site-menu .nav li a:hover, .site-menu .nav li a.active{background: url(../img/nav-active.png) no-repeat;    width: 150px;
+    background-size: 100% 100%;}
+.site-menu .nav li a{color: #609DA0; background: url(../img/nav-normal.png) no-repeat;width: 150px;
+    background-size: 100% 100%;}
+.site-header .filterbg{    background: -webkit-linear-gradient(cadetblue, white);
+    background: -o-linear-gradient(cadetblue, white);
+    background: -moz-linear-gradient(cadetblue, white);
+    background: linear-gradient(cadetblue, white);}
+.mtop-36 {
+    margin-top: 20px;
+}
+.btn-red {
+    background: cadetblue;
+    color: #ffffff;
+}
+.login-action{height: inherit!important;padding-bottom: 20px;margin-top: -30px!important;}
